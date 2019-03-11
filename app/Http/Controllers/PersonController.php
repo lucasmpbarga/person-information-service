@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Person extends Controller
+use App\Person;
+
+class PersonController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,7 @@ class Person extends Controller
      */
     public function index()
     {
-        //
+        return Person::all();
     }
 
     /**
