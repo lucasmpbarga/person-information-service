@@ -23,9 +23,10 @@ class PersonController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        Person::create($request->all());
+        return $request->all();
     }
 
     /**
@@ -81,6 +82,6 @@ class PersonController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Person::find($id)->delete();
     }
 }
