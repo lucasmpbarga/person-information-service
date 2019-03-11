@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Information Person Service
+                    Person Information Service
                 </div>
 
                 <div class="links">
