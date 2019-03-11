@@ -20,7 +20,7 @@ return [
     // MLAB_DB_USERNAME=lmpb
     // MLAB_DB_PASSWORD=dnZM8UNxJRyzfR8
 
-    'default' => env('lmpb:dnZM8UNxJRyzfR8@ds211096.mlab.com:11096/heroku_rjh9l4j6', 'mongodbmlab'),
+    'default' => env('MLAB_DB_CONNECTION', 'mongodbmlab'),
 
     /*
     |--------------------------------------------------------------------------
