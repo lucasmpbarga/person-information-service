@@ -13,7 +13,14 @@ return [
     |
      */
 
-    'default' => env('MLAB_DB_CONNECTION', 'mongodbmlab'),
+    // MLAB_DB_CONNECTION=mongodbmlab
+    // MLAB_DB_HOST=ds211096.mlab.com
+    // MLAB_DB_PORT=11096
+    // MLAB_DB_DATABASE=heroku_rjh9l4j6
+    // MLAB_DB_USERNAME=lmpb
+    // MLAB_DB_PASSWORD=dnZM8UNxJRyzfR8
+
+    'default' => env('lmpb:dnZM8UNxJRyzfR8@ds211096.mlab.com:11096/heroku_rjh9l4j6', 'mongodbmlab'),
 
     /*
     |--------------------------------------------------------------------------
