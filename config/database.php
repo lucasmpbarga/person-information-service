@@ -13,7 +13,7 @@ return [
     |
      */
 
-    'default' => env('DB_CONNECTION', 'mongodbmlab'),
+    'default' => env('MLAB_DB_CONNECTION', 'mongodbmlab'),
 
     /*
     |--------------------------------------------------------------------------
