@@ -46,9 +46,9 @@ class PersonController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($name)
     {
-        //
+        return Person::where(['name'=>$name])->get();
     }
 
     /**
@@ -71,7 +71,8 @@ class PersonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Person::find($id)->update($request->all());
+        return $request->all();
     }
 
     /**
