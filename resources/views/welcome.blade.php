@@ -32,6 +32,8 @@
 
             .position-ref {
                 position: relative;
+                align-self: 'center';
+                background-color: 'red';
             }
 
             .top-right {
@@ -42,6 +44,12 @@
 
             .content {
                 text-align: center;
+            }
+
+            .routes {
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .title {
@@ -61,30 +69,40 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            
+            .container {
+                margin-top: 100;
+                float: none;
+                margin: 0 auto;
+            }
+
+            .vertical-center {
+                min-height: 100%;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+        <div class="jumbotron vertical-center">
+            <div class="container">
+                <div class="content">
+                    <div class="title m-b-md">
+                        Person Information Service
+                    </div>
+                    <div class="title m-b-md">
+                        API Rest
+                    </div>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Person Information Service
-                </div>
-                <div class="title m-b-md">
-                    API Rest
+                <div class="routes">
+                    <ul class="list-group">
+                        <li class="list-group-item">Route::get('person/', 'PersonController@index');</li>
+                        <li class="list-group-item">Route::post('person/', 'PersonController@create');</li>
+                        <li class="list-group-item">Route::get('person/{name}', 'PersonController@show');</li>
+                        <li class="list-group-item">Route::put('person/{id}', 'PersonController@update');</li>
+                        <li class="list-group-item">Route::delete('person/{id}', 'PersonController@destroy');</li>
+                    </ul>
                 </div>
             </div>
         </div>
