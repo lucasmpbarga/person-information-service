@@ -9,5 +9,5 @@ class Person extends Eloquent
     protected $connection = 'mongodbmlab';
     protected $collection = 'person';
 
-    protected $fillable = ['name','birthday', 'phones'];
+    protected $fillable = ['firstName','lastName','birthday', 'phones'];
 }
