@@ -48,7 +48,7 @@ class PersonController extends Controller
      */
     public function show($name)
     {
-        return Person::where(['name'=>$name])->get();
+        return Person::where(['firstName'=>$name])->get();
     }
 
     /**
